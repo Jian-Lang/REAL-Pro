@@ -5,20 +5,23 @@ hydra:
 data:
   task: binary
   num_pos: 7
-  num_neg: 5
+  num_neg: 3
 para:
-  {}
+  ori: false
+  dropout: 0.2
+  loss_alpha: 1.0
+  loss_beta: 1.0
 opt:
   name: Adam
-  lr: 1e-4
-  weight_decay: 5e-5
+  lr: 0.0007
+  weight_decay: 5.0e-05
 sche:
   name: SVFENDLR
-
-num_epoch: 25
+num_epoch: 5
 batch_size: 128
 seed: 2024
 model: SVFEND
 dataset: FakeSV
 type: default
-patience: 5
+patience: 2
+name: SVFEND
